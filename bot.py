@@ -1230,7 +1230,7 @@ def debugging(m):
     cid = m.chat.id
     bot.send_message(cid, "we are fixing some issues, please try again later")
 #"""
-
+"""
 
 @bot.message_handler(func=lambda message: message.chat.id == ME and message.text[0] == '!') ####
 def echo(m):
@@ -1342,13 +1342,13 @@ def getAnswer(m):
 			sendQuestion(2,2,cid)
 		else:
 			newQuestion(cid)
-
+"""
 @bot.message_handler(func=lambda message: True) ####
 def echo(m):
 	cid = m.chat.id
 	print(m.from_user.first_name+": "+m.text)
 	hideBoard = types.ReplyKeyboardHide() 
-	bot.send_message(cid, "I'm sorry, I did not understand '"+m.text+"', use /help for a list of commands, or /answers to display de current answer keyboard.", reply_markup=hideBoard)
+	bot.send_message(cid, "I'm sorry, I did not understand '"+m.text+"', use /help for a list of commands, /answers to display de current answer keyboard or try sending your request again later.", reply_markup=hideBoard)
 	#test(cid)
 
 loadStuff()
