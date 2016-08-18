@@ -8,6 +8,10 @@ http = urllib3.PoolManager(
     cert_reqs='CERT_REQUIRED',
     ca_certs=certifi.where())
 """
+
+import urllib3
+urllib3.disable_warnings()
+
 import telebot 
 from telebot import types
 TOKEN = '187964536:AAEdn30pTPolGCZBG2pUn3caP1FP6mfFKoY'
