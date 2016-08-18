@@ -1,16 +1,6 @@
-"""
-import urllib3.contrib.pyopenssl
-urllib3.contrib.pyopenssl.inject_into_urllib3()
 
-import certifi
-import urllib3
-http = urllib3.PoolManager(
-    cert_reqs='CERT_REQUIRED',
-    ca_certs=certifi.where())
-"""
-
-import urllib3
-urllib3.disable_warnings()
+import logging
+logging.captureWarnings(True)
 
 import telebot 
 from telebot import types
@@ -1228,7 +1218,7 @@ def newQuestion(cid):
 		answerSelect.add('Boy.','Girl.')
 		bot.send_message(cid, "Are you a boy or a girl?", reply_markup=answerSelect)
 
-#"""  switch to debug
+"""  switch to debug
 @bot.message_handler(func=lambda message: not message.chat.id == ME)
 def debugging(m):
     cid = m.chat.id

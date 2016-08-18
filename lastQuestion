@@ -53,6 +53,14 @@ S'Do you like to imagine things for your amusement? '
 p22
 sbsI15141380
 NsI8379173
+NsI4647150
+NsI139942223
+NsI188186801
+NsI170303987
+NsI265841118
+NsI199854105
+NsI234528548
+NsI14164957
 NsI166447709
 (i__main__
 Question
@@ -116,12 +124,4 @@ p43
 sbasg14
 S'There is a bucket. If you put water in it, how high will you fill it?'
 p44
-sbsI4647150
-NsI139942223
-NsI188186801
-NsI170303987
-NsI199854105
-NsI234528548
-NsI14164957
-NsI265841118
-Ns.
+sbs.
