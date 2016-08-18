@@ -2,6 +2,12 @@
 import logging
 logging.captureWarnings(True)
 
+import sys
+import codecs
+from kitchen.text.converters import getwriter
+UTF8Writer = getwriter('utf8')
+sys.stdout = UTF8Writer(sys.stdout)
+
 import telebot 
 from telebot import types
 TOKEN = '187964536:AAEdn30pTPolGCZBG2pUn3caP1FP6mfFKoY'
