@@ -1224,13 +1224,13 @@ def newQuestion(cid):
 		answerSelect.add('Boy.','Girl.')
 		bot.send_message(cid, "Are you a boy or a girl?", reply_markup=answerSelect)
 
-"""  switch to debug
+#"""  switch to debug
 @bot.message_handler(func=lambda message: not message.chat.id == ME)
 def debugging(m):
     cid = m.chat.id
     bot.send_message(cid, "we are fixing some issues, please try again later")
 #"""
-"""
+
 
 @bot.message_handler(func=lambda message: message.chat.id == ME and message.text[0] == '!') ####
 def echo(m):
@@ -1342,7 +1342,7 @@ def getAnswer(m):
 			sendQuestion(2,2,cid)
 		else:
 			newQuestion(cid)
-"""
+
 @bot.message_handler(func=lambda message: True) ####
 def echo(m):
 	cid = m.chat.id
