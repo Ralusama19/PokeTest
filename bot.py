@@ -1,3 +1,4 @@
+"""
 import urllib3.contrib.pyopenssl
 urllib3.contrib.pyopenssl.inject_into_urllib3()
 
@@ -6,7 +7,7 @@ import urllib3
 http = urllib3.PoolManager(
     cert_reqs='CERT_REQUIRED',
     ca_certs=certifi.where())
-
+"""
 import telebot 
 from telebot import types
 TOKEN = '187964536:AAEdn30pTPolGCZBG2pUn3caP1FP6mfFKoY'
@@ -1173,6 +1174,7 @@ def calculate(cid):
 	bot.send_message(cid, "Your pokemon should be...")
 	pokemon = POKEMONS[MAX_STAT[cid].a][gender[cid]]
 	bot.send_message(cid, pokemon+"!!!")
+	print(str(cid)+": "+pokemon)
 	resetUser(cid)
 	bot.send_photo(cid, open("Pics/"+pokemon+".png", 'rb'))
 
@@ -1245,7 +1247,7 @@ def echo(m):
 			if user_step[i] > 0:
 				active += str(i)+'\n'
 		bot.send_message(cid, active, reply_markup=hideBoard)
-		
+
 @bot.message_handler(commands=['start'])
 def command_start(m):
     cid = m.chat.id
