@@ -10,7 +10,9 @@ sys.stdout = UTF8Writer(sys.stdout)
 
 import telebot 
 from telebot import types
-TOKEN = '187964536:AAEdn30pTPolGCZBG2pUn3caP1FP6mfFKoY'
+
+with open('token.txt', 'r') as myfile:
+    TOKEN=myfile.read().replace('\n', '')
 bot = telebot.TeleBot(TOKEN)
 
 import pickle
